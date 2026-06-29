@@ -39,8 +39,6 @@
         color: var(--dark);
         overflow-x: hidden;
       }
-
-      /* ── NAV ── */
       nav {
         position: fixed;
         top: 0;
@@ -123,8 +121,6 @@
           display: none;
         }
       }
-
-      /* ── HERO ── */
       .hero {
         min-height: 100vh;
         padding: 90px 5% 60px;
@@ -134,7 +130,6 @@
         position: relative;
         overflow: hidden;
       }
-      /* gold glow blobs */
       .hero::before {
         content: "";
         position: absolute;
@@ -182,7 +177,6 @@
           display: none;
         }
       }
-
       .hero-pill {
         display: inline-flex;
         align-items: center;
@@ -213,7 +207,6 @@
           opacity: 0.3;
         }
       }
-
       .hero h1 {
         font-family: "Playfair Display", serif;
         font-size: clamp(2.6rem, 5vw, 4.2rem);
@@ -235,7 +228,6 @@
         color: var(--rose);
         display: block;
       }
-
       .hero-desc {
         font-size: 0.92rem;
         line-height: 1.85;
@@ -249,7 +241,6 @@
         color: var(--gold2);
         font-weight: 700;
       }
-
       .hero-badges {
         display: flex;
         flex-wrap: wrap;
@@ -273,7 +264,6 @@
         color: var(--gold);
         font-size: 1rem;
       }
-
       .hero-btns {
         display: flex;
         gap: 14px;
@@ -313,8 +303,6 @@
       .btn-outline-gold:hover {
         background: rgba(201, 160, 64, 0.1);
       }
-
-      /* FLOATING CARD */
       .hero-card-wrap {
         position: relative;
       }
@@ -411,7 +399,6 @@
       .hc-cta:hover {
         box-shadow: 0 6px 24px rgba(201, 160, 64, 0.5);
       }
-
       .fl-badge {
         position: absolute;
         background: #1a1208;
@@ -444,8 +431,6 @@
         font-weight: 600;
         letter-spacing: 0.06em;
       }
-
-      /* ── TRUST BAR ── */
       .trust {
         background: linear-gradient(
           90deg,
@@ -476,8 +461,6 @@
         letter-spacing: 0.08em;
         text-transform: uppercase;
       }
-
-      /* ── SECTION SHARED ── */
       .sec-eyebrow {
         display: inline-flex;
         align-items: center;
@@ -514,8 +497,6 @@
         line-height: 1.8;
         max-width: 520px;
       }
-
-      /* ── ABOUT ── */
       .about {
         padding: 100px 5%;
         background: var(--ivory);
@@ -622,8 +603,6 @@
         color: var(--muted);
         line-height: 1.6;
       }
-
-      /* ── SERVICES ── */
       .services {
         padding: 100px 5%;
         background: var(--dark);
@@ -734,8 +713,6 @@
       .svc-link:hover {
         gap: 10px;
       }
-
-      /* ── GALLERY ── */
       .gallery {
         padding: 100px 5%;
         background: var(--black);
@@ -813,8 +790,6 @@
           grid-row: span 1;
         }
       }
-
-      /* ── TESTIMONIALS ── */
       .testimonials {
         padding: 100px 5%;
         background: var(--ivory);
@@ -901,8 +876,6 @@
         margin-top: 2px;
         letter-spacing: 0.04em;
       }
-
-      /* ── WHY US ── */
       .why {
         padding: 100px 5%;
         background: var(--dark);
@@ -963,7 +936,105 @@
         line-height: 1.7;
       }
 
-      /* ── HOURS + CONTACT ── */
+      /* SERVICE AREAS */
+      .areas {
+        padding: 100px 5%;
+        background: var(--ivory);
+      }
+      .areas .sec-eyebrow {
+        color: var(--gold);
+      }
+      .areas-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+        gap: 16px;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .area-card {
+        background: var(--white);
+        border: 1px solid rgba(201, 160, 64, 0.18);
+        border-radius: 12px;
+        padding: 24px 20px;
+        text-align: center;
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+      }
+      .area-card::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--gold), var(--gold2));
+        transform: scaleX(0);
+        transition: transform 0.3s;
+        transform-origin: left;
+      }
+      .area-card:hover::after {
+        transform: scaleX(1);
+      }
+      .area-card:hover {
+        box-shadow: 0 12px 40px rgba(201, 160, 64, 0.15);
+        transform: translateY(-4px);
+        border-color: rgba(201, 160, 64, 0.35);
+      }
+      .area-pin {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        display: block;
+      }
+      .area-name {
+        font-family: "Playfair Display", serif;
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--dark);
+        margin-bottom: 4px;
+      }
+      .area-dist {
+        font-size: 0.65rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-weight: 700;
+      }
+      .area-note {
+        font-size: 0.72rem;
+        color: var(--muted);
+        margin-top: 6px;
+        line-height: 1.5;
+      }
+      .areas-note-box {
+        max-width: 1100px;
+        margin: 40px auto 0;
+        background: var(--dark);
+        border: 1px solid rgba(201, 160, 64, 0.2);
+        border-radius: 12px;
+        padding: 24px 32px;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+      .an-icon {
+        font-size: 1.6rem;
+        flex-shrink: 0;
+      }
+      .an-text {
+        font-size: 0.82rem;
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.7;
+      }
+      .an-text strong {
+        color: var(--gold2);
+      }
+      .areas-cta-row {
+        text-align: center;
+        margin-top: 44px;
+      }
+
       .contact-sec {
         padding: 100px 5%;
         background: var(--ivory);
@@ -1073,8 +1144,6 @@
       .cc-btn:hover {
         box-shadow: 0 6px 28px rgba(201, 160, 64, 0.45);
       }
-
-      /* ── APPOINTMENT ── */
       .appt {
         padding: 100px 5%;
         background: var(--black);
@@ -1185,8 +1254,6 @@
         transform: translateY(-2px);
         box-shadow: 0 10px 40px rgba(201, 160, 64, 0.55);
       }
-
-      /* ── FOOTER ── */
       footer {
         background: #060402;
         padding: 56px 5% 28px;
@@ -1250,8 +1317,6 @@
         color: var(--gold);
         text-decoration: none;
       }
-
-      /* ── SECTION CENTER WRAPPER ── */
       .sec-center {
         text-align: center;
         margin-bottom: 52px;
@@ -1259,8 +1324,6 @@
         flex-direction: column;
         align-items: center;
       }
-
-      /* ── SCROLL FADE ── */
       .fi {
         opacity: 0;
         transform: translateY(28px);
@@ -1275,7 +1338,6 @@
     </style>
   </head>
   <body>
-    <!-- NAV -->
     <nav>
       <a class="nav-brand" href="#">
         <img class="nav-logo" src="logo.png" alt="Firdaus Logo" />
@@ -1289,12 +1351,12 @@
         <li><a href="#services">Courses</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#areas">Areas</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <a href="#appointment" class="nav-enrol">Enrol Now</a>
     </nav>
 
-    <!-- HERO -->
     <section class="hero">
       <div class="hero-inner">
         <div>
@@ -1325,8 +1387,6 @@
             <a href="#services" class="btn-outline-gold">View Courses →</a>
           </div>
         </div>
-
-        <!-- FLOATING CARD -->
         <div class="hero-card-wrap">
           <div class="fl-badge fl-1">
             <div>
@@ -1387,7 +1447,6 @@
       </div>
     </section>
 
-    <!-- TRUST BAR -->
     <div class="trust">
       <div class="tr-item">
         <span class="tr-check">✓</span
@@ -1411,7 +1470,6 @@
       </div>
     </div>
 
-    <!-- ABOUT -->
     <section class="about fi" id="about">
       <div class="about-grid">
         <div class="about-imgs">
@@ -1486,7 +1544,6 @@
       </div>
     </section>
 
-    <!-- SERVICES -->
     <section class="services fi" id="services">
       <div class="sec-center">
         <div class="sec-eyebrow">What We Teach</div>
@@ -1622,7 +1679,6 @@
       </div>
     </section>
 
-    <!-- GALLERY -->
     <section class="gallery fi" id="gallery">
       <div class="sec-center">
         <div class="sec-eyebrow">Our Work</div>
@@ -1676,7 +1732,6 @@
       </div>
     </section>
 
-    <!-- TESTIMONIALS -->
     <section class="testimonials fi" id="testimonials">
       <div class="sec-center">
         <div class="sec-eyebrow">Student Reviews</div>
@@ -1792,7 +1847,6 @@
       </div>
     </section>
 
-    <!-- WHY US -->
     <section class="why fi">
       <div class="sec-center">
         <div class="sec-eyebrow">Why Choose Us</div>
@@ -1854,7 +1908,158 @@
       </div>
     </section>
 
-    <!-- CONTACT + HOURS -->
+    <!-- SERVICE AREAS SECTION -->
+    <section class="areas fi" id="areas">
+      <div class="sec-center">
+        <div class="sec-eyebrow">Where We Serve</div>
+        <h2 class="sec-title">Students from <em>Across South Delhi</em></h2>
+        <p class="sec-sub">
+          Conveniently located in Jamia Nagar — easily reachable from all nearby
+          areas. Hazaaron students humare paas in jagahon se aate hain.
+        </p>
+      </div>
+
+      <div class="areas-grid">
+        <div class="area-card">
+          <span class="area-pin">🏠</span>
+          <div class="area-name">Jamia Nagar</div>
+          <div class="area-dist">Home Location</div>
+          <div class="area-note">
+            Our academy is right here — walk-in welcome anytime
+          </div>
+        </div>
+        <div class="area-card">
+          <span class="area-pin">📍</span>
+          <div class="area-name">Basantpur</div>
+          <div class="area-dist">Nearby Area</div>
+          <div class="area-note">
+            Bahut se students Basantpur se hamare paas aate hain
+          </div>
+        </div>
+        <div class="area-card">
+          <span class="area-pin">📍</span>
+          <div class="area-name">Jaitpur</div>
+          <div class="area-dist">Nearby Area</div>
+          <div class="area-note">
+            Badarpur road se asaan pahunch, thodi door hai bas
+          </div>
+        </div>
+        <div class="area-card">
+          <span class="area-pin">📍</span>
+          <div class="area-name">Badarpur</div>
+          <div class="area-dist">Nearby Area</div>
+          <div class="area-note">
+            Metro aur auto dono se aasaan connectivity
+          </div>
+        </div>
+        <div class="area-card">
+          <span class="area-pin">📍</span>
+          <div class="area-name">Shaheen Bagh</div>
+          <div class="area-dist">Nearby Area</div>
+          <div class="area-note">
+            Bilkul paas — sirf kuch minute ki doori par
+          </div>
+        </div>
+        <div class="area-card">
+          <span class="area-pin">📍</span>
+          <div class="area-name">Okhla</div>
+          <div class="area-dist">Nearby Area</div>
+          <div class="area-note">
+            Okhla Phase 1, 2 & 3 — sab se aasaan pahunch
+          </div>
+        </div>
+        <div class="area-card">
+          <span class="area-pin">📍</span>
+          <div class="area-name">Jasola</div>
+          <div class="area-dist">Nearby Area</div>
+          <div class="area-note">
+            Jasola Vihar se 15 minute se bhi kam mein pahuncho
+          </div>
+        </div>
+        <div class="area-card">
+          <span class="area-pin">📍</span>
+          <div class="area-name">Julena</div>
+          <div class="area-dist">Nearby Area</div>
+          <div class="area-note">
+            Bahut nazdeek — hamare popular student areas mein se ek
+          </div>
+        </div>
+        <div class="area-card">
+          <span class="area-pin">📍</span>
+          <div class="area-name">Abul Fazl Enclave</div>
+          <div class="area-dist">Nearby Area</div>
+          <div class="area-note">
+            Bohot se students yahan se walking distance pe hain
+          </div>
+        </div>
+        <div class="area-card">
+          <span class="area-pin">📍</span>
+          <div class="area-name">Batla House</div>
+          <div class="area-dist">Nearby Area</div>
+          <div class="area-note">
+            Hamare community ke dil mein — bilkul aasaan access
+          </div>
+        </div>
+        <div class="area-card">
+          <span class="area-pin">📍</span>
+          <div class="area-name">Zakir Nagar</div>
+          <div class="area-dist">Nearby Area</div>
+          <div class="area-note">
+            Hamare sabse popular areas mein se ek, ekdum saath mein
+          </div>
+        </div>
+        <div class="area-card">
+          <span class="area-pin">📍</span>
+          <div class="area-name">Sarita Vihar</div>
+          <div class="area-dist">Nearby Area</div>
+          <div class="area-note">
+            Morning aur evening batches dono ke liye convenient
+          </div>
+        </div>
+        <div class="area-card">
+          <span class="area-pin">📍</span>
+          <div class="area-name">Madanpur Khadar</div>
+          <div class="area-dist">Nearby Area</div>
+          <div class="area-note">
+            Kalindi Kunj road se aasaan route available hai
+          </div>
+        </div>
+        <div class="area-card">
+          <span class="area-pin">📍</span>
+          <div class="area-name">New Friends Colony</div>
+          <div class="area-dist">Nearby Area</div>
+          <div class="area-note">
+            Mathura Road route se asaan access milti hai
+          </div>
+        </div>
+        <div class="area-card">
+          <span class="area-pin">📍</span>
+          <div class="area-name">Lajpat Nagar</div>
+          <div class="area-dist">Nearby Area</div>
+          <div class="area-note">
+            Metro aur auto se ek chota sa safar — bahut convenient
+          </div>
+        </div>
+      </div>
+
+      <div class="areas-note-box">
+        <span class="an-icon">🚇</span>
+        <div class="an-text">
+          <strong>South Delhi ke har kone se aasaan pahunch.</strong>
+          Nearest metro: Okhla Vihar & Jasola Apollo (Pink Line). E-rickshaw aur
+          auto seedha academy tak aate hain.
+          <strong>Rasta nahi pata? Call karein: +91 99718 40295</strong> — hum
+          guide karenge.
+        </div>
+      </div>
+
+      <div class="areas-cta-row">
+        <a href="#appointment" class="btn-gold"
+          >Book Your Free Consultation →</a
+        >
+      </div>
+    </section>
+
     <section class="contact-sec fi" id="contact">
       <div class="sec-center">
         <div class="sec-eyebrow">Visit Us</div>
@@ -1911,7 +2116,9 @@
             <div>
               <div class="cc-lbl">Location</div>
               <div class="cc-val">
-                Adarsh Khalilullah, Jamia Nagar, New Delhi
+                K50 khalulla Masjid
+Batla House
+New Delhi 110025
               </div>
             </div>
           </div>
@@ -1929,7 +2136,7 @@
             <div>
               <div class="cc-lbl">Phone</div>
               <div class="cc-val">
-                <a href="tel:+919971840295">+91 99718 40295</a><br />
+                <a href="tel:+919971840295">+91 99718 40295</a>
               </div>
             </div>
           </div>
@@ -1938,7 +2145,6 @@
       </div>
     </section>
 
-    <!-- APPOINTMENT -->
     <section class="appt fi" id="appointment">
       <div class="sec-center">
         <div class="sec-eyebrow">Ready to Begin?</div>
@@ -1980,8 +2186,8 @@
             <label>Preferred Date</label><input type="date" />
           </div>
           <div class="fg" style="margin-bottom: 0">
-            <label>Preferred Time</label>
-            <select>
+            <label>Preferred Time</label
+            ><select>
               <option value="" disabled selected>Select time...</option>
               <option>Morning (10 AM – 1 PM)</option>
               <option>Afternoon (1 PM – 5 PM)</option>
@@ -2002,7 +2208,6 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
       <img class="foot-logo" src="logo.png" alt="Firdaus Logo" />
       <div class="foot-name">
@@ -2016,15 +2221,14 @@
           margin-bottom: 18px;
         "
       >
-       K50 khalulla masjid
-Batla house
-New Delhi 110025 &nbsp;·&nbsp; +91 99718 40295
-        &nbsp;·&nbsp; Firdaus382@gmail.com
+        K50 Khalulla Masjid, Batla House, New Delhi 110025 &nbsp;·&nbsp; +91
+        99718 40295 &nbsp;·&nbsp; Firdaus382@gmail.com
       </div>
       <div class="foot-links">
         <a href="#about">About</a><a href="#services">Courses</a
-        ><a href="#gallery">Gallery</a> <a href="#testimonials">Reviews</a
-        ><a href="#contact">Contact</a><a href="#appointment">Enrol Now</a>
+        ><a href="#gallery">Gallery</a><a href="#testimonials">Reviews</a
+        ><a href="#areas">Areas</a><a href="#contact">Contact</a
+        ><a href="#appointment">Enrol Now</a>
       </div>
       <div class="foot-line"></div>
       <div class="foot-copy">
